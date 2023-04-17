@@ -1,38 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## How to Use the Application
+1. Start by navigating to the home page, where you will see a list of users. This list simulates user data that is stored in a database.
 
-## Getting Started
+2. To add more users to the list, click on the "Add User" button and fill out the form that appears.
 
-First, run the development server:
+3. If you want to find a specific person in the list, type their name into the search bar. If that person is in the list, their details will appear below the search bar.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Approach
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+1. The first step in developing the application was to use Postman to check if data was being received from the API.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+2. Once the data was being received, it was fetched and stored in the state. To make the data persistent, it was also stored in local storage. When a user returns to the page, the application checks if there is data in local storage, as the user may have added more data.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+3. If a user wants to add more users to the list, the existing data is retrieved from local storage, and new data is added while validating it first.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. If a user wants to search for someone in the list, the application filters the users based on name and then renders the filtered results.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+# Styling
+1. Bootstrap was the main styling tool used in the application.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. The application also demonstrates how external and internal CSS can be incorporated.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Challenges during development
+1. One of the main challenges faced during development was a hydration error that occurred when using the antd modal component.
 
-## Deploy on Vercel
+2. Another challenge was that there was no post API available to save user data. As a workaround, local storage was used for persistence.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. There were also some issues related to the version of Next.js during the initial setup.
