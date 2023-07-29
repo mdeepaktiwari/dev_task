@@ -1,13 +1,15 @@
 import Link from "next/link";
-import { HeartFilled } from "@ant-design/icons";
+import {HeartFilled} from "@ant-design/icons";
 
 function Navigation() {
   return (
-    <div className="d-flex align-items-center justify-content-between py-2 m-md-2 px-md-2 border-bottom-purple box-shadow-blur-nav">
+    <div className="d-flex align-items-center justify-content-between py-2 mx-2 px-md-2 border-bottom-purple box-shadow-blur-nav">
       <div className="text-left">
-        <h2 className="text-dark m-0">Frontend task</h2>
+        <h2 className="text-dark m-0">NameConnect+</h2>
         <p className="text-muted cursive m-0 d-flex align-items-center">
-          <span>made with</span> <HeartFilled className="mx-1" style={{color:"#822132"}}/> <span>by deepak...</span>
+          <span>made with</span>{" "}
+          <HeartFilled className="mx-1" style={{color: "#822132"}} />{" "}
+          <span>by deepak...</span>
         </p>
       </div>
       <div className="px-2 py-1">

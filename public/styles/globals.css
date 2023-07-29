@@ -10,7 +10,7 @@ body {
 }
 
 .box-shadow-blur {
-  box-shadow:0 0 10px 2px #822132;
+  box-shadow: 0 0 10px 2px #822132;
   position: relative;
 }
 
@@ -28,4 +28,12 @@ body {
 
 .font-size-12 {
   font-size: 12px;
+}
+
+.font-weight-dark {
+  font-weight: 800;
+}
+
+.font-size-13 {
+  font-size: 13px;
 }
